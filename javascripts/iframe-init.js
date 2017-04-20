@@ -23,8 +23,9 @@ function openPopup(url) {
   var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
   var thisWidth = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
   var thisHeight = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-  var childWidth = OneSignal._windowWidth;
-  var childHeight = OneSignal._windowHeight;
+  // You can set the dimensions of the popup to be whatever you'd like
+  var childWidth = 650;
+  var childHeight = 568;
   var left = ((thisWidth / 2) - (childWidth / 2)) + dualScreenLeft;
   var top = ((thisHeight / 2) - (childHeight / 2)) + dualScreenTop;
   window.open(url, "yoursite-http-popup", 'scrollbars=yes, width=' + childWidth + ', height=' + childHeight + ', top=' + top + ', left=' + left);
